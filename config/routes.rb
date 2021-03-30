@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  get '/signup' => 'users#new'
+  # get '/signup' => 'users#create'
+  
   resources :ratings
   resources :subjects
   resources :courses
