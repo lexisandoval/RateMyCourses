@@ -1,13 +1,7 @@
 Rails.application.routes.draw do
   
-  root 'sessions#home'
-  
   get '/signup' => 'users#new'
   # get '/signup' => 'users#create'
-
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/logout', to: "sessions#destroy"
   
   resources :ratings
   resources :subjects
