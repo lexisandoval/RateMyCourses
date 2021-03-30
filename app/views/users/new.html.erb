@@ -1,14 +1,21 @@
-<h1>Sign Up</h1>
+<section class="page-section" id="services">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Sign Up</h2>
+      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
 
-<%= form_for(@user) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br><br>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <br><br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br><br>
-  <%= f.submit "Create an Account" %>
-<% end %>
+      <%= form_for(@user) do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <br><br>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <br><br>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <br><br>
+        <%= f.submit "Create an Account" %>
+      <% end %>
+    </div>
+  </div>
+</section>
