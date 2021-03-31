@@ -1,10 +1,15 @@
 <div class="container centered">
   <h1 class="brand head">New Rating</h1>
 
-        <h2><%= link_to "Course", new_course_path %></h2>
 
 
   <%= form_for(@rating) do |f| %>
+
+    <%= f.label :course %>
+    <%= f.collection_select :course_id, Course.all, :id, :title_with_number %>
+
+    <p class="small"><%= link_to "(Click here if you don't see your course listed above.)", new_course_path %></p>
+
     <%= f.label :stars %>
     <%= f.select(:stars, ['1', '2', '3', '4', '5'], {include_blank: ""}) %>
     <br><br>
