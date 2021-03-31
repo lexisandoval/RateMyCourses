@@ -7,5 +7,4 @@ class Rating < ApplicationRecord
     "#{self.content} - #{self.user.name.capitalize}"
   end
 
-
 end
