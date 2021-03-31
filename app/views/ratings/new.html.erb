@@ -8,7 +8,7 @@
     <%= f.label :course %>
     <%= f.collection_select :course_id, Course.all, :id, :title_with_number %>
 
-    <p class="small"><%= link_to "(Click here if you don't see your course listed above.)", new_course_path %></p>
+    <p><a class="small main brand" href="/courses/new">(Click <span style = "color:#4ba4c7">here</span> if you don't see your course listed above.)</a></p>
 
     <%= f.label :stars %>
     <%= f.select(:stars, ['1', '2', '3', '4', '5'], {include_blank: ""}) %>
@@ -19,4 +19,5 @@
     <%= f.submit "Submit Rating" %>
 
   <% end %>
+
 </div>
