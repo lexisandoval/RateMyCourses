@@ -1,9 +1,14 @@
 class SessionsController < ApplicationController
 
+  # def destroy
+  #   if session[:user_id]
+  #     session.delete :user_id
+  #   end
+  #   redirect_to root_path
+  # end
+
   def destroy
-    if session[:user_id]
-      session.delete :user_id
-    end
+    session.clear
     redirect_to root_path
   end
 
