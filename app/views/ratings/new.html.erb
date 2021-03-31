@@ -1,0 +1,12 @@
+<h1>New Rating<h1>
+
+<%= form_for(@rating) do |f| %>
+  <%= f.label :stars %>
+  <%= f.text_field :stars %>
+
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+
+  <%= f.submit%>
+
+<% end %>
