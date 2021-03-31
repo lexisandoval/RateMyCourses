@@ -1,0 +1,17 @@
+<div class="container centered">
+  <h1 class="brand head">Add a Course</h1>
+
+  <%= form_for(@course) do |f| %>
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+    <br><br>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <br><br>   
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <br><br>
+    <%= f.submit "Add Course" %>
+
+  <% end %>
+</div>
