@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :authorized_edit?
 
   private 
 
@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
       flash[:error] = "You must be logged in to view this page."
       redirect_to '/'
     end
+  end
+
+  def authorized_edit?(rating)
+    rating.user == current_user
   end
 
 end

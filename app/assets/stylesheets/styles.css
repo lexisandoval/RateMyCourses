@@ -42,17 +42,23 @@ li a:hover:not(.main) {
 
 .container {
   text-align: center;
+  border-radius: 20px;
+  background-color: white;
+  padding: 2%;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .centered {
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 2%;
-  border-radius: 20px;
 }
 
 .brand {
