@@ -2,7 +2,7 @@
   <h1 class="brand head">Add a Course</h1>
 
   <%= form_for(@course) do |f| %>
-    <%= f.label :number %>
+    <%= f.label :number, "Number (3-digit code)" %>
     <%= f.text_field :number %>
     <br><br>
     <%= f.label :title %>
