@@ -7,7 +7,7 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
     if @course.save
-      redirect_to root_path
+      redirect_to new_rating_path
     else
       render :new
     end
