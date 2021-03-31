@@ -1,8 +1,8 @@
 <% if !logged_in? %>
   <div class="nav">
     <ul>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/signup">Sign Up</a></li>
+      <li><%= link_to "Login", login_path %></li>
+      <li><%= link_to "Sign Up", signup_path %></li>
       <li style="float:left"><a class="main brand" href="/">RateMyCourses</a></li>
     </ul>
   </div>
@@ -10,8 +10,8 @@
   <div class="nav">
     <ul>
       <li><%= link_to "Logout", logout_path, method:"delete"%></li>
-      <li><a href="/">Rate</a></li>
-      <li><a href="/">Review</a></li>
+      <li><%= link_to "Rate", logout_path %></li>
+      <li><%= link_to "Review", logout_path %></li>
       <li style="float:left"><a class="main brand" href="/">RateMyCourses</a></li>
     </ul>
   </div>
