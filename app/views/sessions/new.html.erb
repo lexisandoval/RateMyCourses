@@ -1,0 +1,13 @@
+<div class="container centered">
+  <h1 class="brand head">Login</h1>
+
+  <%= form_for(:user, :html => { class: 'form' }) do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <br><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br><br>
+    <%= f.submit "Login" %>
+  <% end %>
+</div>
