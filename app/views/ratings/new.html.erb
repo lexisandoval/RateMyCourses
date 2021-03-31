@@ -1,12 +1,14 @@
-<h1>New Rating<h1>
+<div class="container centered">
+  <h1 class="brand head">New Rating</h1>
 
-<%= form_for(@rating) do |f| %>
-  <%= f.label :stars %>
-  <%= f.text_field :stars %>
+  <%= form_for(@rating) do |f| %>
+    <%= f.label :stars %>
+    <%= f.select(:stars, ['⭑', '⭑⭑', '⭑⭑⭑', '⭑⭑⭑⭑', '⭑⭑⭑⭑⭑'], {include_blank: ""}) %>
+    <br><br>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <br><br>
+    <%= f.submit "Submit Rating" %>
 
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-
-  <%= f.submit%>
-
-<% end %>
+  <% end %>
+</div>
