@@ -1,7 +1,7 @@
 <div class="container centered">
   <h1 class="brand head">Add a Course</h1>
 
-  <%= form_for(@course) do |f| %>
+  <%= form_for(@course, :html => { class: 'form' }) do |f| %>
 
     <%= f.label :subject %><br>
     <%= f.collection_select :subject_id, Subject.all, :id, :name %>
