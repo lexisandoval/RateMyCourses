@@ -97,6 +97,11 @@ input[type=submit] {
   text-decoration: none;
 }
 
+.plain {
+  color:#4ba4c7;
+  text-decoration: none;
+}
+
 input[type=textarea] {
   width: 500px;
   height: 20px;
