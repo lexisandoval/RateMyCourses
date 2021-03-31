@@ -9,7 +9,7 @@
 <% else %>
   <div class="nav">
     <ul>
-      <li><a href="/logout">Logout</a></li>
+      <li><%= link_to "Logout", logout_path, method:"delete"%></li>
       <li><a href="/">Rate</a></li>
       <li><a href="/">Review</a></li>
       <li style="float:left"><a class="main brand" href="/">RateMyCourses</a></li>
