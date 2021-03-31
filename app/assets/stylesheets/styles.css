@@ -50,6 +50,9 @@ li a:hover:not(.main) {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2%;
+  border-radius: 20px;
 }
 
 .brand {
@@ -105,4 +108,11 @@ input[type=submit] {
 input[type=textarea] {
   width: 500px;
   height: 20px;
+}
+
+.splash {
+  background-image: url("/assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
