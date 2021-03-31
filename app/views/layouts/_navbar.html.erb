@@ -1,7 +1,18 @@
-<div class="nav">
-  <ul>
-    <li><a href="/login">Login</a></li>
-    <li><a href="/signup">Sign Up</a></li>
-    <li style="float:left"><a class="main brand" href="/">RateMyCourses</a></li>
-  </ul>
-</div>
+<% if !logged_in? %>
+  <div class="nav">
+    <ul>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/signup">Sign Up</a></li>
+      <li style="float:left"><a class="main brand" href="/">RateMyCourses</a></li>
+    </ul>
+  </div>
+<% else %>
+  <div class="nav">
+    <ul>
+      <li><a href="/logout">Logout</a></li>
+      <li><a href="/">Rate</a></li>
+      <li><a href="/">Review</a></li>
+      <li style="float:left"><a class="main brand" href="/">RateMyCourses</a></li>
+    </ul>
+  </div>
+<% end %>
