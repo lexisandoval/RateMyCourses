@@ -6,7 +6,7 @@
   <% end %></h4>
   <p>"<%= @rating.content %>"</p>
 
-  <p><a class="small main brand" href="/">Edit this Rating</a></p>
+  <p><a class="small main brand" href="/users/<%= @rating.user_id %>/ratings/<%= @rating.id %>/edit">Edit this Rating</a></p>
   <p><a class="small main brand" href="/">Go Back</a></p>
 
 </div>
