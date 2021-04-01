@@ -3,7 +3,11 @@ class RatingsController < ApplicationController
   before_action :redirect_if_not_logged_in
 
   def index
-    @ratings = Rating.all
+    if params[:user_id] && @user = User.find_by_id(params[:user_id])
+      @ratings = @user.ratings
+    else
+      @ratings = Rating.all
+    end
   end
 
   def new
@@ -18,6 +22,10 @@ class RatingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @rating = Rating.find_by(id: params[:id])
   end
 
   private

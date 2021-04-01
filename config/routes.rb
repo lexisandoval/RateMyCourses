@@ -12,12 +12,10 @@ Rails.application.routes.draw do
   
   resources :ratings
   # resources :subjects
-  resources :courses do
-    resources :ratings, only: [:new, :create, :index]
-  end
+  resources :courses
 
   resources :users do 
-    resources :ratings, only: [:new, :create, :index]
+    resources :ratings, only: [:new, :create, :index, :show]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

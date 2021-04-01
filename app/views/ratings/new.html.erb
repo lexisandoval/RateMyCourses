@@ -1,8 +1,6 @@
 <div class="container centered">
   <h1 class="brand head">New Rating</h1>
 
-
-
   <%= form_for(@rating, :html => { class: 'form' }) do |f| %>
 
     <%= f.label :course %>
@@ -17,7 +15,6 @@
     <%= f.text_field :content %>
     <br><br>
     <%= f.submit "Submit Rating" %>
-
-  <% end %>
-
+    
+  <% end %><br>
 </div>

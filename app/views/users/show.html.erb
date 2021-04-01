@@ -8,11 +8,13 @@
   <% end%>
   <br>
 
-  <h2>Click to edit any of your ratings:</h2>
+  <h2>Click to view or edit any of your ratings:</h2>
   <% @ratings.each do |rating| %>
     <% if authorized_edit?(rating) %>
-      <p><span style="font-weight:bold">(<%= rating.course.title_with_number %>)</span> <%= rating.content %></p>
+  
+      <%= link_to "yo", user_rating_path(rating) %> 
+      <p><a href="/users/#{rating.user_id}/ratings/#{rating.id}" ><span style="font-weight:bold">(<%= rating.course.title_with_number %>)</span> <%= rating.content %></a></p>
     <% end%>
   <% end %>
-
+  <br>
 </div>
