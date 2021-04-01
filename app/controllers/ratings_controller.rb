@@ -16,14 +16,12 @@ class RatingsController < ApplicationController
     if params[:user_id] && @user = User.find_by_id(params[:user_id])
       @rating = @user.ratings.build
     else 
-      @error = "Unauthorized" if params[:user_id]
       @rating = Rating.new
     end
   end
 
   def create
     @rating = current_user.ratings.build(rating_params)
-    @rating.course_id = 1
     if @rating.save
       redirect_to ratings_path
     else
@@ -33,13 +31,22 @@ class RatingsController < ApplicationController
 
   def show
     @rating = Rating.find_by(id: params[:id])
+    redirect_to ratings_path if !@rating || @rating.user != current_user #add helper
   end
 
   def edit
     @rating = Rating.find_by(id: params[:id])
+    redirect_to ratings_path if !@rating || @rating.user != current_user #add helper
   end 
 
   def update
+    @rating = Rating.find_by(id: params[:id])
+    redirect_to ratings_path if !@rating || @rating.user != current_user #add helper
+    if @rating.update(rating_params)
+     redirect_to rating_path(@rating)
+    else
+     render :edit
+   end
   end
 
   private
