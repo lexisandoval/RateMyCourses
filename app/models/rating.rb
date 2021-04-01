@@ -12,11 +12,7 @@ class Rating < ApplicationRecord
   end
 
   def self.filter(params)
-    where("subject_id = ?", params)
-  end
-
-  def subject_attributes=(attr)
-    self.subject = Subject.find_or_create_by(attr) if !attr[:name].blank?
+    where("course_id = ?", params)
   end
 
 end
