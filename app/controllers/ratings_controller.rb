@@ -9,10 +9,16 @@ class RatingsController < ApplicationController
       @error = "Unauthorized" if params[:user_id]
       @ratings = Rating.all
     end
+    @ratings = @ratings.filter(params[:rating][:subject_id]) if params[:rating] && params[:rating][:subject_id] != ""
   end
 
   def new
-    @rating = Rating.new
+    if params[:user_id] && @user = User.find_by_id(params[:user_id])
+      @rating = @user.ratings.build
+    else 
+      @error = "Unauthorized" if params[:user_id]
+      @rating = Rating.new
+    end
   end
 
   def create
@@ -39,7 +45,7 @@ class RatingsController < ApplicationController
   private
 
   def rating_params
-    params.require(:rating).permit(:stars, :content)
+    params.require(:rating).permit(:stars, :content, :subject_id, subject_attributes: [:name])
   end
   
 end

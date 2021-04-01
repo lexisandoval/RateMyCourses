@@ -1,15 +1,29 @@
 <div class="container centered">
   <h1 class="brand head">Recent Course Ratings</h1>
 
-  <% @ratings.each do |rating| %>
-    <div>
-      <h2><%= rating.course.full_title %></h2>
-      
-      <h3><% rating.stars.times do  %>
-        <%= "⭑" %>
-      <% end %></h3>
-      <%= rating.content_with_author %>
-    </div>
+  <%= form_for(:ratings, :html => { class: 'form' }, method: 'get') do %>
+    <%= label_tag(:subject_id, "Filter By Subject:") %>
+    <%= collection_select(:rating, :subject_id, Subject.order(:name), :id, :name, { include_blank: '' }) %>
+    <br>
+    <%= submit_tag("Filter") %>
   <% end %>
+
+  <br><br>
+
+  <% if @ratings.blank? %>
+    <h2>No ratings yet. Submit a rating <%= link_to "here", new_user_rating_path(current_user) %>.</h2>
+  <% else %>
+    <% @ratings.each do |rating| %>
+      <div>
+        <h2><%= rating.course.full_title %></h2>
+        
+        <h3><% rating.stars.times do  %>
+          <%= "⭑" %>
+        <% end %></h3>
+        <%= rating.content_with_author %>
+      </div>
+    <% end %>
+  <% end %>
+
   <br>
 </div>

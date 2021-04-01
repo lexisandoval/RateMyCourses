@@ -1,10 +1,12 @@
+<%= render partial: "layouts/errors", locals: {object: @rating} %>
+
 <div class="container centered">
   <h1 class="brand head">New Rating</h1>
 
   <%= form_for(@rating, :html => { class: 'form' }) do |f| %>
 
     <%= f.label :course %>
-    <%= f.collection_select :course_id, Course.order(:subject), :id, :full_title, { include_blank: '' } %>
+    <%= f.collection_select :course_id, Course.order(:full_title), :id, :full_title, { include_blank: '' } %>
 
     <p><a class="small main brand" href="/courses/new">(Click <span style = "color:#4ba4c7">here</span> if you don't see your course listed above.)</a></p>
 
