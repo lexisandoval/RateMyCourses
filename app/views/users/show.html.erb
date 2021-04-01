@@ -3,7 +3,7 @@
 
   <h2>Courses you have rated:</h2>
   <% @user.courses.each do |course| %>
-    <h3> <%= course.title_with_number %></h3>
+    <h3> <%= course.full_title %></h3>
   <% end%>
   <br>
 
@@ -11,7 +11,7 @@
 
   <% @ratings.each do |rating| %>
     <% if authorized_edit?(rating) %>
-      <p><a class="no_underline"href="/users/<%= rating.user_id %>/ratings/<%= rating.id %>">(<span class="bold underline"><%= rating.course.title_with_number %></span>)
+      <p><a class="no_underline"href="/users/<%= rating.user_id %>/ratings/<%= rating.id %>">(<span class="bold underline"><%= rating.course.full_title %></span>)
       <%= rating.content %></span></a></p>
     <% end%>
   <% end %>

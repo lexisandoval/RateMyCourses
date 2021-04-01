@@ -3,7 +3,7 @@
 
   <% @ratings.each do |rating| %>
     <div>
-      <h2><%= rating.course.title_with_number %></h2>
+      <h2><%= rating.course.full_title %></h2>
       
       <h3><% rating.stars.times do  %>
         <%= "⭑" %>

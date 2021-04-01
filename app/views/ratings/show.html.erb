@@ -1,6 +1,6 @@
 <div class="container centered">
   <h1 class="brand head">Rating #<%= @rating.id %></h1>
-  <h2>You gave <span class="plain"><%= @rating.course.title_with_number %></span> <%= @rating.stars %> stars.</h2>
+  <h2>You gave <span class="plain"><%= @rating.course.full_title %></span> <%= @rating.stars %> stars.</h2>
   <h4><% @rating.stars.times do  %>
         <%= "⭑" %>
   <% end %></h4>
