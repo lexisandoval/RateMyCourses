@@ -1,5 +1,5 @@
 <div class="container centered">
-  <h1 class="brand head">Rating #<%= @rating.id %></h1>
+  <h1 class="brand subhead">Rating from <%= @rating.created_at.strftime("%A, %d %b %Y") %></h1>
   <h2>You gave <span class="plain"><%= @rating.course.full_title %></span> <%= @rating.stars %> stars.</h2>
   <h4><% @rating.stars.times do  %>
         <%= "⭑" %>
@@ -12,6 +12,6 @@
   <p>-------------</p>
   <p class="small main brand"><%= link_to "Delete", user_rating_path(@rating.user, @rating), :method => "delete", :class => "destroy", :style=>'color:black;text-decoration:none;' %><p>
   <p>-------------</p>
-  <p><a class="small main brand" href="/">Go Back</a></p>
+  <p><a class="small main brand" href="/users/<%= @rating.user_id %>">Go Back</a></p>
 
 </div>

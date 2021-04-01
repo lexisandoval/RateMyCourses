@@ -9,7 +9,7 @@ class Rating < ApplicationRecord
   validates :course_id, uniqueness: true
 
   def content_with_author
-    "#{self.content} - #{self.user.name.capitalize}"
+    "\"#{self.content}\" - #{self.user.name.capitalize}"
   end
 
   def self.filter(params)

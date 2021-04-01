@@ -4,12 +4,11 @@
   <h1 class="brand head">New Rating</h1>
 
   <%= form_for(@rating, :html => { class: 'form' }) do |f| %>
+    <p class="small main brand">(Click <a class="small main brand" style="color:#4ba4c7" href="/courses/new">here</a> if you don't see your course listed below.)</p>
 
     <%= f.label :course %>
     <%= f.collection_select :course_id, Course.all, :id, :full_title, { include_blank: '' } %>
-
-    <p><a class="small main brand" href="/courses/new">(Click <span style = "color:#4ba4c7">here</span> if you don't see your course listed above.)</a></p>
-
+    <br><br>
     <%= f.label :stars %>
     <%= f.select(:stars, ['1', '2', '3', '4', '5'], {include_blank: ""}) %>
     <br><br>
