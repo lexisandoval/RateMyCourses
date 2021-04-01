@@ -6,6 +6,8 @@ class Rating < ApplicationRecord
   validates :course_id, presence: true
   validates :stars, presence: true
   validates :content, presence: true
+  validates :course_id, uniqueness: true
+
 
   def content_with_author
     "#{self.content} - #{self.user.name.capitalize}"

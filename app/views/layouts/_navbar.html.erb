@@ -11,9 +11,9 @@
     <ul>
       <li><%= link_to "Logout", logout_path, method:"delete"%></li>
       <li><%= link_to "Rate", new_user_rating_path(current_user) %></li>
-      <li><%= link_to "Review", ratings_path %></li>
-      <li><%= link_to "Home", root_path %></li>
-      <li style="float:left"><a class="main brand" href="/">RateMyCourses</a></li>
+      <li><%= link_to "Profile", user_path(current_user) %></li>
+      <li><%= link_to "Home", ratings_path %></li>
+      <li style="float:left"><a class="main brand" href="/ratings">RateMyCourses</a></li>
     </ul>
   </div>
 <% end %>

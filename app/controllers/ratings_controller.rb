@@ -23,7 +23,7 @@ class RatingsController < ApplicationController
   def create
     @rating = current_user.ratings.build(rating_params)
     if @rating.save
-      redirect_to ratings_path
+      redirect_to user_path(current_user)
     else
       render :new
     end
@@ -47,6 +47,12 @@ class RatingsController < ApplicationController
     else
      render :edit
    end
+  end
+
+  def destroy
+    @rating = Rating.find(params[:id])
+    @rating.destroy
+    redirect_to ratings_path
   end
 
   private

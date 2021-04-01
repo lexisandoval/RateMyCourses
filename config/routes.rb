@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :courses
 
   resources :users do 
-    resources :ratings, only: [:new, :create, :index, :show, :edit]
+    resources :ratings
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -8,7 +8,9 @@ class Course < ApplicationRecord
   validates :number, length: { is: 3}
   validates :number, numericality: { only_integer: true }
   validates :title, length: { in: 3..25 }
+  validates :title, uniqueness: true
   validates :description, length: { in: 10..100 }
+
 
   def number_with_subject
     "#{self.subject.name} #{self.number}"

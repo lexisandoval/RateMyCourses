@@ -2,7 +2,7 @@
   <h1 class="brand head">Welcome <%= @user.name.capitalize %>!</h1>
 
   <h2>Courses you have rated:</h2>
-  <% @user.courses.each do |course| %>
+  <% @user.courses.uniq.each do |course| %>
     <h3> <%= course.full_title %></h3>
   <% end%>
   <br>
