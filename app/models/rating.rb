@@ -3,9 +3,9 @@ class Rating < ApplicationRecord
   belongs_to :user
   belongs_to :course
 
-  validates :course_id, presence: true
-  validates :stars, presence: true
-  validates :content, presence: true
+  # All fields must be completed
+  validates :course_id, :stars, :content, presence: true
+  # User can only rate a course once
   validates :course_id, uniqueness: true
 
   def content_with_author
