@@ -119,6 +119,11 @@ select {
   text-align: center;
 }
 
+.success {
+  color:#05b405; 
+  text-align: center;
+}
+
 .small {
   font-size: small;
   color: black;

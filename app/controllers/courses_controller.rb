@@ -7,7 +7,8 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
     if @course.save
-      redirect_to new_rating_path
+      flash[:message] = "Course was successfully added."
+      redirect_to new_user_rating_path(current_user)
     else
       render :new
     end
