@@ -28,6 +28,13 @@ class RatingsController < ApplicationController
     @rating = Rating.find_by(id: params[:id])
   end
 
+  def edit
+    @rating = Rating.find_by(id: params[:id])
+  end 
+
+  def update
+  end
+
   private
 
   def rating_params
