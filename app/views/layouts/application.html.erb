@@ -25,6 +25,8 @@
     <% if flash[:error] %>
       <p class="error"><%= flash[:error] %></p>
     <% end %>
+
+    <p class="error"><%= @error %></p>
     
     <div class="myScrollableDiv">
       <%= yield %>

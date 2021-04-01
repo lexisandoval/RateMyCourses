@@ -6,6 +6,7 @@ class RatingsController < ApplicationController
     if params[:user_id] && @user = User.find_by_id(params[:user_id])
       @ratings = @user.ratings
     else
+      @error = "Unauthorized" if params[:user_id]
       @ratings = Rating.all
     end
   end
