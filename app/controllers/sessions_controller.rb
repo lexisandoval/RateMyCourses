@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
   def home
     if logged_in?
-      redirect_to user_path(current_user)
+      redirect_to ratings_path
     else
       render :'sessions/home'
     end
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:user][:username])
     if user && user.authenticate(params[:user][:password])
       session[:user_id] = user.id
-      redirect_to user_path(user)
+      redirect_to ratings_path
     else
       flash[:error] = "Login failed: The information provided was incorrect."
       redirect_to login_path

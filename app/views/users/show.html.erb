@@ -11,8 +11,10 @@
 
   <% @ratings.each do |rating| %>
     <% if authorized_edit?(rating) %>
+      <br>
+      <p style="font-weight:bold"><%= rating.updated_at.strftime("%A, %d %b %Y") %></p>
       <p><a class="no_underline"href="/users/<%= rating.user_id %>/ratings/<%= rating.id %>">(<span class="main underline"><%= rating.course.full_title %></span>)
-      <%= rating.content %></span></a></p>
+      "<%= rating.content %>"</span></a></p>
     <% end%>
   <% end %>
   <br>

@@ -3,19 +3,22 @@
 <div class="container centered">
   <h1 class="brand head">Add a Course</h1>
 
+  <p>If you cannot remember course details, please refer to <a target="_blank" class="small main brand" href="https://public.enroll.wisc.edu/search?term=0000">this</a> website.</p>
+  <br>
+
   <%= form_for(@course, :html => { class: 'form' }) do |f| %>
 
-    <%= f.label :subject %><br>
+    <%= f.label :subject, "Subject" %><br>
     <%= f.collection_select :subject_id, Subject.order(:name), :id, :name, { include_blank: '' } %>
     <br><br>
     <%= f.label :number, "Number (3-digit code)" %>
-    <%= f.text_field :number %>
+    <%= f.text_field :number, placeholder: "i.e. 252" %>
     <br><br>
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: "i.e. Introduction To Computer Engineering" %>
     <br><br>   
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, placeholder: "i.e. Logic components built with transistors, rudimentary Boolean algebra..." %>
     <br><br>
     <%= f.submit "Add Course" %>
 
