@@ -6,8 +6,12 @@
   <% end %></h4>
   <p>"<%= @rating.content %>"</p>
 
-  <p><a class="small main brand" href="/users/<%= @rating.user_id %>/ratings/<%= @rating.id %>/edit">Edit this Rating</a></p>
-  <p class="small main brand"><%= link_to "Delete", user_rating_path(@rating.user, @rating), :method => "delete", :class => "destroy" %><p>
+  <br>
+  
+  <p><a class="small main brand" href="/users/<%= @rating.user_id %>/ratings/<%= @rating.id %>/edit">Edit</a></p>
+  <p>-------------</p>
+  <p class="small main brand"><%= link_to "Delete", user_rating_path(@rating.user, @rating), :method => "delete", :class => "destroy", :style=>'color:black;text-decoration:none;' %><p>
+  <p>-------------</p>
   <p><a class="small main brand" href="/">Go Back</a></p>
 
 </div>
