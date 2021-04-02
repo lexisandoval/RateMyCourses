@@ -10,13 +10,13 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    !!current_user #truthy value of current user object
+    !!current_user 
   end
 
   def redirect_if_not_logged_in
     if !logged_in?
       flash[:error] = "You must be logged in to view this page."
-      redirect_to '/'
+      redirect_to root_path
     end
   end
 

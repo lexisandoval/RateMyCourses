@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 
   def index
-    redirect_to user_path(current_user)
+    if !logged_in?
+      redirect_if_not_logged_in
+    else
+      redirect_to user_path(current_user)
+    end
   end
 
   def new

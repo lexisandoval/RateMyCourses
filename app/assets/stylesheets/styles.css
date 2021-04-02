@@ -166,3 +166,7 @@ select {
   height: auto;
   padding-top: 1%
 }
+
+.black {
+  color:black;
+}

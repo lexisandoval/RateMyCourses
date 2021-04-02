@@ -11,7 +11,6 @@ class Course < ApplicationRecord
   validates :number, numericality: { only_integer: true }
   # Course title cannot already exist and must be between 3 and 25 characters long
   validates :title, length: { in: 3..25 }
-  validates :title, uniqueness: true
   # Course description must be between 10 and 100 characters long
   validates :description, length: { in: 10..100 }
 

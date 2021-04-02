@@ -1,5 +1,11 @@
 class CoursesController < ApplicationController
 
+  before_action :redirect_if_not_logged_in
+
+  def index
+    redirect_to new_course_path
+  end
+
   def new
     @course = Course.new
   end

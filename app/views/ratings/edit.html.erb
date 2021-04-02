@@ -1,6 +1,6 @@
-<%= render partial: "layouts/errors", locals: {object: @rating} %>
-
 <div class="container centered">
+  <%= render partial: "layouts/errors", locals: {object: @rating} %>
+
   <h1 class="brand head">Edit Rating</h1>
 
   <%= form_for(@rating, :html => { class: 'form' }) do |f| %>
