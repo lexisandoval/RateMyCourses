@@ -9,7 +9,7 @@
   <%= form_for(@course, :html => { class: 'form' }) do |f| %>
 
     <%= f.label :subject, "Subject" %><br>
-    <%= f.collection_select :subject_id, Subject.order(:name), :id, :name, { include_blank: '' } %>
+    <%= f.collection_select :subject_id, Subject.alpha, :id, :name, { include_blank: '' } %>
     <br><br>
     <%= f.label :number, "Number (3-digit code)" %>
     <%= f.text_field :number, placeholder: "i.e. 252" %>

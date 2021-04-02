@@ -5,8 +5,6 @@
     <h2>You have not rated any courses yet.</h2>
     <p class="main brand" style="color:black">Please click <a class="no_underline main brand" style="color:#4ba4c7" href="/users/<%= @user.id %>/ratings/new">here</a> to add a rating.</p>
 
-
-
   <% else %>
     <h2>Courses you have rated:</h2>
     <% @user.courses.uniq.each do |course| %>

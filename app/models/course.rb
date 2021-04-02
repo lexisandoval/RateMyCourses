@@ -15,6 +15,7 @@ class Course < ApplicationRecord
   # Course description must be between 10 and 100 characters long
   validates :description, length: { in: 10..100 }
 
+  scope :alpha_subject, -> { includes(:subject).order('subjects.name ASC') }
 
   def number_with_subject
     "#{self.subject.name} #{self.number}"

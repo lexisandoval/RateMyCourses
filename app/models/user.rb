@@ -9,7 +9,6 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   has_secure_password
 
-
   def self.create_from_omniauth(auth)
     User.find_or_create_by(uid: auth['uid']) do |u|
       u.name = auth['info']['first_name']
