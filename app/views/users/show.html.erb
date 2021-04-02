@@ -1,21 +1,29 @@
 <div class="container centered">
-  <h1 class="brand head">Hi <%= @user.name.capitalize %>!</h1>
+  <h1 class="brand head">Hi, <%= @user.name.capitalize %>!</h1>
 
-  <h2>Courses you have rated:</h2>
-  <% @user.courses.uniq.each do |course| %>
-    <h3><%= course.full_title %></h3>
-  <% end%>
-  <br>
+  <% if @user.ratings.blank? %>
+    <h2>You have not rated any courses yet.</h2>
+    <p class="main brand" style="color:black">Please click <a class="no_underline main brand" style="color:#4ba4c7" href="/users/<%= @user.id %>/ratings/new">here</a> to add a rating.</p>
 
-  <h2>Click to view or edit any of your ratings:</h2>
 
-  <% @ratings.each do |rating| %>
-    <% if authorized_edit?(rating) %>
-      <br>
-      <p style="font-weight:bold"><%= rating.updated_at.strftime("%A, %d %b %Y") %></p>
-      <p><a class="no_underline"href="/users/<%= rating.user_id %>/ratings/<%= rating.id %>">(<span class="main underline"><%= rating.course.full_title %></span>)
-      "<%= rating.content %>"</span></a></p>
+
+  <% else %>
+    <h2>Courses you have rated:</h2>
+    <% @user.courses.uniq.each do |course| %>
+      <h3><%= course.full_title %></h3>
     <% end%>
+    <br>
+
+    <h2>Click to view or edit any of your ratings:</h2>
+
+    <% @ratings.each do |rating| %>
+      <% if authorized_edit?(rating) %>
+        <br>
+        <p style="font-weight:bold"><%= rating.updated_at.strftime("%A, %d %b %Y") %></p>
+        <p><a class="no_underline"href="/users/<%= rating.user_id %>/ratings/<%= rating.id %>">(<span class="main underline"><%= rating.course.full_title %></span>)
+        "<%= rating.content %>"</span></a></p>
+      <% end%>
+    <% end %>
   <% end %>
   <br>
 </div>
