@@ -10,10 +10,9 @@
     <br><br>
     <%= f.submit "Login" %>
   <% end %>
+  <p>or</p>
 
-<br>
-  <%= link_to "Log In with Google", '/auth/google_oauth2' %>
-
+  <h2><%= button_to "Login with Google", '/auth/google_oauth2' %></h2>
   <p><a class="small main brand" href="/">Go Back</a></p>
 
 </div>
