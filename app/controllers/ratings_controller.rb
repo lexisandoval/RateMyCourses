@@ -27,6 +27,7 @@ class RatingsController < ApplicationController
   def create
     @rating = current_user.ratings.build(rating_params)
     if @rating.save
+      flash[:message] = "Rating was successfully added."
       redirect_to user_path(current_user)
     else
       render :new
@@ -48,7 +49,8 @@ class RatingsController < ApplicationController
     redirect_if_not_authorized(@rating)
 
     if @rating.update(rating_params)
-     redirect_to rating_path(@rating)
+      flash[:message] = "Rating was successfully updated."
+      redirect_to rating_path(@rating)
     else
      render :edit
     end
