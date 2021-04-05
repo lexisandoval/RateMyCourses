@@ -1,8 +1,8 @@
 <h1 class="brand head">Recent Course Ratings</h1>
 
 <%= form_for(:ratings, :html => { class: 'form' }, method: 'get') do %>
-  <%= label_tag(:subject_id, "Filter By Subject:") %>
-  <%= collection_select(:rating, :subject_id, Subject.alpha, :id, :name, { include_blank: '' }) %>
+  <%= label_tag(:course_id, "Filter By Course:") %>
+  <%= collection_select(:rating, :course_id, Course.all, :id, :title, { include_blank: '' }) %>
   <br>
   <%= submit_tag("Filter") %>
 <% end %>

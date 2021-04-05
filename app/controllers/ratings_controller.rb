@@ -3,13 +3,13 @@ class RatingsController < ApplicationController
   before_action :redirect_if_not_logged_in
 
   def index
-    if params[:user_id] && @user = User.find_by_id(params[:user_id])
-      @ratings = @user.ratings
-    else
-      @error = "Unauthorized" if params[:user_id]
-      @ratings = Rating.all
+
+    @ratings = Rating.all
+
+    # if params[:user_id] && @user = User.find_by_id(params[:user_id])
+    if params[:rating] && params[:rating][:course_id]
+      @ratings = Rating.filter(params[:rating][:course_id])
     end
-    @ratings = @ratings.filter(params[:rating][:course_id]) if params[:rating] && params[:rating][:course_id] != ""
   end
 
   def new
