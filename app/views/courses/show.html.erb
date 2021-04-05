@@ -8,14 +8,14 @@
 
 <% else %>
   <h2>Ratings:</h2>
-  <% @course.ratings.each do |rating| %>
+  <% @course.ratings.sort_by(&:updated_at).reverse.each do |rating| %>
     <h3><% rating.stars.times do  %>
       <%= "⭑" %>
     <% end %></h3>
-    <p>"<%= rating.content %>" - <%= rating.user.name.capitalize %></p>   
+
+    <p><%= rating.content_with_author %></p>   
   <% end %>
 <% end %>
 
 <br>
-
 <p><a class="small main brand" href="/ratings">Go Back</a></p>

@@ -13,7 +13,6 @@
   <br>
 
   <h2>Click to view or edit any of your ratings:</h2>
-
   <% @user.ratings.each do |rating| %>
       <br>
       <p style="font-weight:bold"><%= rating.updated_at.strftime("%A, %d %b %Y") %></p>

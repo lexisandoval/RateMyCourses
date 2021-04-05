@@ -5,8 +5,6 @@ class Rating < ApplicationRecord
 
   # All fields must be completed
   validates :course_id, :stars, :content, presence: true
-  # User can only rate a course once
-  validates :course_id, uniqueness: true
 
   def content_with_author
     "\"#{self.content}\" - #{self.user.name.capitalize}"

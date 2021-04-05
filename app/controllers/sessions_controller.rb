@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
 
   def create 
     user = User.find_by(username: params[:user][:username])
+    
     if user && user.authenticate(params[:user][:password])
       session[:user_id] = user.id
       redirect_to ratings_path
@@ -24,7 +25,7 @@ class SessionsController < ApplicationController
     end
   end
 
-  def omniauth  #log users in with omniauth
+  def omniauth  # log users in with omniauth
     user = User.create_from_omniauth(auth)
     if user.valid?
       session[:user_id] = user.id

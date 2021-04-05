@@ -1,17 +1,15 @@
-<div class="container">
-  <h1 class="brand head">Login</h1>
+<h1 class="brand head">Login</h1>
 
-  <%= form_for(:user, :html => { class: 'form' }) do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-    <br><br>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    <br><br>
-    <%= f.submit "Log In" %>
-  <% end %>
-  <p>or</p>
+<%= form_for(:user, :html => { class: 'form' }) do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br><br>
+  <%= f.submit "Log In" %>
+<% end %>
+<p>or</p>
 
-  <h2><%= button_to "Log In With Google", '/auth/google_oauth2' %></h2>
-  <p><a class="small main brand" href="/">Go Back</a></p>
-</div>
+<h2><%= button_to "Log In With Google", '/auth/google_oauth2' %></h2>
+<p><a class="small main brand" href="/">Go Back</a></p>

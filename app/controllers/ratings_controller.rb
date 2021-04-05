@@ -3,12 +3,14 @@ class RatingsController < ApplicationController
   before_action :redirect_if_not_logged_in
 
   def index
+    # if user clicks the filter button, filter by course name
     if params[:rating] && params[:rating][:course_id]
       if params[:rating][:course_id] == ''
         @ratings= Rating.all
       else
         @ratings = Rating.filter(params[:rating][:course_id])
       end
+    # otherwise show all the ratings
     else
       @ratings = Rating.all
     end
@@ -49,7 +51,7 @@ class RatingsController < ApplicationController
      redirect_to rating_path(@rating)
     else
      render :edit
-   end
+    end
   end
 
   def destroy
