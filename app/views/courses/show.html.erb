@@ -1,0 +1,15 @@
+<h1 class="brand subhead"><%= @course.full_title %></h1>
+<p><%= @course.description %></p>
+<br>
+
+<h2>Ratings:</h2>
+<% @course.ratings.each do |rating| %>
+  <h3><% rating.stars.times do  %>
+    <%= "⭑" %>
+  <% end %></h3>
+  <p>"<%= rating.content %>" - <%= rating.user.name.capitalize %></p>   
+<% end %>
+
+<br>
+
+<p><a class="small main brand" href="/ratings">Go Back</a></p>

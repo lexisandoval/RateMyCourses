@@ -10,6 +10,11 @@ class CoursesController < ApplicationController
     @course = Course.new
   end
 
+  def show
+    @course = Course.find_by(id: params[:id])
+
+  end
+
   def create
     @course = Course.new(course_params)
     if @course.save

@@ -15,7 +15,7 @@
 <% else %>
   <% @ratings.each do |rating| %>
     <div>
-      <h2><%= rating.course.full_title %></h2>
+      <a class="no_underline" href="/courses/<%= rating.course.id %>"><h2 class="main brand black"><%= rating.course.full_title %></h2></a>
 
       <h3><% rating.stars.times do  %>
         <%= "⭑" %>
