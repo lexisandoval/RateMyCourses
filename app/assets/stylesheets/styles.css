@@ -74,7 +74,7 @@ select {
 
 .myScrollableDiv {
   position: fixed;
-  top: 90px;
+  top: 78.25px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -87,7 +87,7 @@ select {
   background-color: white;
   padding: 2%;
   min-width: 500px;
-  margin-top: 3%;
+  margin-top: 5%;
   margin-bottom: 3%;
   margin-right: 20%;
   margin-left: 20%;
