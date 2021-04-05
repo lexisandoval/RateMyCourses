@@ -1,24 +1,27 @@
-# README
+# RateMyCourses
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rate, Review, and Rave about courses at UW-Madison. We're your trusted source for honest opinions from hundreds of students just like you!
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Clone this repository and then execute:
 
-* System dependencies
+    $ bundle install
 
-* Configuration
+## Usage
 
-* Database creation
+To run the web application, run the command $rails s and open your browser to http://localhost:3000.
 
-* Database initialization
+Once open, you may create an account and review ratings for courses at UW-Madison. Your login information will be saved and you may return to your account at any time. Happy rating!
 
-* How to run the test suite
+## Contributing
 
-* Services (job queues, cache servers, search engines, etc.)
+Bug reports and pull requests are welcome on GitHub at https://github.com/lexisandoval/RateMyCourses. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/lexisandoval/RateMyCourses/blob/master/CODE_OF_CONDUCT.md).
 
-* Deployment instructions
+## License
 
-* ...
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Code of Conduct
+
+Everyone interacting in the OnlineSalesTracker project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/lexisandoval/RateMyCourses/blob/master/CODE_OF_CONDUCT.md).
