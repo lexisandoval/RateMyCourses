@@ -3,15 +3,14 @@ class RatingsController < ApplicationController
   before_action :redirect_if_not_logged_in
 
   def index
-
     if params[:rating] && params[:rating][:course_id]
-      @ratings = Rating.filter(params[:rating][:course_id])
+      if params[:rating][:course_id] == ''
+        @ratings= Rating.all
+      else
+        @ratings = Rating.filter(params[:rating][:course_id])
+      end
     else
       @ratings = Rating.all
-    end
-
-    if params[:rating][:course_id] == ''
-      @ratings= Rating.all
     end
   end
 
