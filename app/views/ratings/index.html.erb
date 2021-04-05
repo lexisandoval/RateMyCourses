@@ -2,7 +2,7 @@
 
 <%= form_for(:ratings, :html => { class: 'form' }, method: 'get') do %>
   <%= label_tag(:course_id, "Filter By Course:") %>
-  <%= collection_select(:rating, :course_id, Course.all, :id, :title, { include_blank: '' }) %>
+  <%= collection_select(:rating, :course_id, Course.alpha_subject, :id, :full_title, { include_blank: '' }) %>
   <br>
   <%= submit_tag("Filter") %>
 <% end %>

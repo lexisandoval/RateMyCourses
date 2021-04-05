@@ -4,11 +4,14 @@ class RatingsController < ApplicationController
 
   def index
 
-    @ratings = Rating.all
-
-    # if params[:user_id] && @user = User.find_by_id(params[:user_id])
     if params[:rating] && params[:rating][:course_id]
       @ratings = Rating.filter(params[:rating][:course_id])
+    else
+      @ratings = Rating.all
+    end
+
+    if params[:rating][:course_id] == ''
+      @ratings= Rating.all
     end
   end
 
