@@ -7,7 +7,7 @@
 <% else %>
   <h2>Courses you have rated:</h2>
   <br>
-  <% @user.courses.uniq.each do |course| %>
+  <% @user.courses.uniq.sort_by{|course| course.title}.each do |course| %>
     <h3 class="main brand black"><%= course.full_title %></h3>
   <% end%>
   <br>

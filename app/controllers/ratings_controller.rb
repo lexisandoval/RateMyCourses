@@ -33,17 +33,18 @@ class RatingsController < ApplicationController
 
   def show
     @rating = Rating.find_by(id: params[:id])
-    redirect_to ratings_path if !@rating || @rating.user != current_user #add helper
+    redirect_if_not_authorized(@rating)
   end
 
   def edit
     @rating = Rating.find_by(id: params[:id])
-    redirect_to ratings_path if !@rating || @rating.user != current_user #add helper
+    redirect_if_not_authorized(@rating)
   end 
 
   def update
     @rating = Rating.find_by(id: params[:id])
-    redirect_to ratings_path if !@rating || @rating.user != current_user #add helper
+    redirect_if_not_authorized(@rating)
+
     if @rating.update(rating_params)
      redirect_to rating_path(@rating)
     else
@@ -54,6 +55,8 @@ class RatingsController < ApplicationController
   def destroy
     @rating = Rating.find(params[:id])
     @rating.destroy
+
+    flash[:message] = "Rating was successfully deleted."
     redirect_to ratings_path
   end
 

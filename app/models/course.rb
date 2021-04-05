@@ -15,7 +15,7 @@ class Course < ApplicationRecord
   validates :description, length: { in: 10..750 }
 
   scope :alpha_subject, -> { includes(:subject).order('subjects.name ASC') }
-
+  
   def number_with_subject
     "#{self.subject.name} #{self.number}"
   end

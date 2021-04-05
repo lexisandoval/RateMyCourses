@@ -24,4 +24,11 @@ class ApplicationController < ActionController::Base
     rating.user == current_user
   end
 
+  def redirect_if_not_authorized(rating)
+    if rating == nil || !authorized_edit?(rating)
+      flash[:error] = "You may only review your own ratings."
+      redirect_to ratings_path
+    end
+  end
+
 end
