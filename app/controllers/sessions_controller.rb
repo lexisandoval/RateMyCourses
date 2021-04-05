@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-  def home
+  def home    
     if logged_in?
       redirect_to ratings_path
     else

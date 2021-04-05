@@ -45,7 +45,7 @@ input[type=submit] {
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px; 
-  font-size: .6em;
+  font-size: 60%;
   height: 35px;
   width: 100%;
 }
@@ -58,7 +58,7 @@ input[type=textarea] {
 select {
   width: 100%;
   color: black;
-  font-size: .75em;
+  font-size: 75%;
 }
 
 .main {
@@ -67,14 +67,14 @@ select {
 }
 
 .nav {
-  height: 70px; /* notice this value */
+  height: 70px; 
   width: 100%;
-  font-size: 1.75em;
+  font-size: 175%;
 }
 
 .myScrollableDiv {
   position: fixed;
-  top: 90px; /* same height as navbar */
+  top: 90px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -86,15 +86,12 @@ select {
   border-radius: 20px;
   background-color: white;
   padding: 2%;
+  min-width: 500px;
+  margin-top: 3%;
+  margin-bottom: 3%;
   margin-right: 20%;
   margin-left: 20%;
   width: auto;
-}
-
-.cont {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .brand {
@@ -103,15 +100,15 @@ select {
 }
 
 .head {
-  font-size: 3em;
+  font-size: 300%;
 }
 
 .subhead {
-  font-size: 2.5em;
+  font-size: 250%;
 }
 
 .form {
-  font-size: 1.75em;
+  font-size: 175%;
 }
 
 .error {
@@ -157,7 +154,7 @@ select {
 }
 
 .home_img {
-  width: 15%;
+  width: 100px;
   height: auto;
   padding-top: 1%
 }
