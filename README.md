@@ -7,6 +7,7 @@ Rate, Review, and Rave about courses at UW-Madison. We're your trusted source fo
 Clone this repository and then execute:
 
     $ bundle install
+    $ rake db:migrate
 
 ## Usage
 
