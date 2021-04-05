@@ -1,4 +1,4 @@
-<div class="container centered">
+<div class="container">
   <h1 class="brand head">Recent Course Ratings</h1>
 
   <%= form_for(:ratings, :html => { class: 'form' }, method: 'get') do %>
@@ -17,10 +17,11 @@
     <% @ratings.each do |rating| %>
       <div>
         <h2><%= rating.course.full_title %></h2>
-        
+
         <h3><% rating.stars.times do  %>
           <%= "⭑" %>
         <% end %></h3>
+        
         <%= rating.content_with_author %>
       </div>
     <% end %>

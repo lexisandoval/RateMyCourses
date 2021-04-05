@@ -86,6 +86,8 @@ select {
   border-radius: 20px;
   background-color: white;
   padding: 2%;
+  margin-right: 20%;
+  margin-left: 20%;
   width: auto;
 }
 
@@ -93,13 +95,6 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .brand {
