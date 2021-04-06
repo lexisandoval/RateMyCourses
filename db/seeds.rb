@@ -1,7 +1,18 @@
+lexi = User.create(username: "Lexi", name: "Lexi", password: "Lexi")
+judy = User.create(username: "Judy", name: "Judy", password: "Judy")
+frank = User.create(username: "Frank", name: "Frank", password: "Frank")
+nikki = User.create(username: "Nikki", name: "Nikki", password: "Nikki")
+ivan = User.create(username: "Ivan", name: "Ivan", password: "Ivan")
+
 Subject.create(name: "Accounting and Information Systems")
 Subject.create(name: "Actuarial Science")
 Subject.create(name: "African Cultural Studies")
-Subject.create(name: "Afro-American Studies")
+
+am = Subject.create(name: "Afro-American Studies")
+  am154 = am.courses.create(title: "Hip-Hop And Contemporary American Society", number: "154", 
+  description: "The aesthetic and political evolution of hip-hop culture and its relationship to contemporary social issues.")
+  am154.ratings.create(stars: "5", content: "Favorite course at UW! So fun and interesting, we pretty much listened to music the entire time.", user_id: "3")
+
 Subject.create(name: "Agricultural and Applied Economics")
 Subject.create(name: "Agroecology")
 Subject.create(name: "Agronomy")
@@ -43,8 +54,19 @@ Subject.create(name: "Community and Environmental Sociology")
 Subject.create(name: "Comparative Biosciences")
 Subject.create(name: "Comparative Literature")
 Subject.create(name: "Computer Sciences")
-Subject.create(name: "Consumer Science")
-Subject.create(name: "Counseling Psychology")
+cs = Subject.create(name: "Consumer Science")
+  cs252 = cs.courses.create(title: "Introduction To Computer Engineering", number: "252",
+    description: "Logic components built with transistors, rudimentary Boolean algebra, basic combinational logic design, basic synchronous sequential logic design, basic computer organization and design, introductory machine- and assembly-language programming.")
+
+  cs400 = cs.courses.create(title: "Programming III", number: "400",
+    description: "The third course in our programming fundamentals sequence. It presumes that students understand and use functional and object-oriented design and abstract data types as needed. This course introduces balanced search trees, graphs, graph traversal algorithms, hash tables and sets, and complexity analysis and about classes of problems that require each data type. Students are required to design and implement using high quality professional code, a medium sized program, that demonstrates knowledge and use of latest language features, tools, and conventions.")
+  cs400.ratings.create(stars: "1", content: "Hated this course. Lots of group projects and the tests were very difficult. Try to avoid if you can.", user_id: "4")
+
+coun = Subject.create(name: "Counseling Psychology")
+  coun115 = coun.courses.create(title: "Human Resources Development: Educational Effectiveness", number: "115", 
+    description: "Exploration of personal, institutional, and community resources that optimize academic success and persistence. Utilizes didactic and experiential methods to develop higher level learning, skill, and understanding.")
+  coun115.ratings.create(stars: "3", content: "Easy 1 credit course to add on to any semester. I recommend!", user_id: "1")
+
 Subject.create(name: "Curriculum and Instruction")
 Subject.create(name: "Dairy Science")
 Subject.create(name: "Dance")
@@ -152,7 +174,12 @@ Subject.create(name: "Physician Assistant Program")
 Subject.create(name: "Physics")
 Subject.create(name: "Physiology")
 Subject.create(name: "Plant Pathology")
-Subject.create(name: "Political Science")
+
+ps = Subject.create(name: "Political Science")
+  ps104 = ps.courses.create(title: "Introduction To American Politics And Government", number: "104", 
+    description: "Basic institutions and processes of American government. The role of constitutional structures, parties, interest groups and elections in the system; policy formation and policy content.")
+    ps104.ratings.create(stars: "4", content: "Difficult yet interesting course. You'll definitely need to refer to the textbook quite a bit.", user_id: "2")
+  
 Subject.create(name: "Population Health Sciences")
 Subject.create(name: "Portuguese")
 Subject.create(name: "Psychiatry")
@@ -171,7 +198,12 @@ Subject.create(name: "Social and Administrative Pharmacy")
 Subject.create(name: "Social Work")
 Subject.create(name: "Sociology")
 Subject.create(name: "Soil Science")
-Subject.create(name: "Spanish")
+
+span = Subject.create(name: "Spanish")
+  span204 = span.courses.create(title: "Fourth Semester Spanish", number: "304", 
+  description: "Second-semester intermediate level language review, extensive readings in literature, intensive written and oral activities.")
+  span204.ratings.create(stars: "4", content: "Fun course! Heavy focus on reading so if you have time, I would try and read an easy Spanish book ahead of time so you're better prepared.", user_id: "5")
+
 Subject.create(name: "Statistics")
 Subject.create(name: "Surgery")
 Subject.create(name: "Surgical Sciences")
