@@ -8,6 +8,7 @@ Clone this repository and then execute:
 
     $ bundle install
     $ rake db:migrate
+    $ rake db:seed
 
 ## Usage
 
