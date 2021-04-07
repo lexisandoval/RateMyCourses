@@ -257,6 +257,7 @@
     position: fixed;
     top: 0;
     padding-right: 1%;
+    white-space: nowrap;
   }
 
   .myScrollableDiv {
@@ -270,12 +271,8 @@
   }
 
   .container {
-    position: fixed;
-    overflow: scroll;
     text-align: center;
     padding: 2%;
-    margin-left: 1%;
-    margin-right: 1%;
     margin-top: 10%;
     margin-bottom: 3%;
     width: 100%;
