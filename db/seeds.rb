@@ -54,6 +54,7 @@ Subject.create(name: "Community and Environmental Sociology")
 Subject.create(name: "Comparative Biosciences")
 Subject.create(name: "Comparative Literature")
 Subject.create(name: "Consumer Science")
+
 cs = Subject.create(name: "Computer Sciences")
   cs252 = cs.courses.create(title: "Introduction To Computer Engineering", number: "252",
     description: "Logic components built with transistors, rudimentary Boolean algebra, basic combinational logic design, basic synchronous sequential logic design, basic computer organization and design, introductory machine- and assembly-language programming.")
