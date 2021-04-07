@@ -193,7 +193,7 @@
   }
 
   li a {
-    display: inline-block
+    display: inline-block;
     color: white;
     text-align: center;
     padding-right: 8%;
