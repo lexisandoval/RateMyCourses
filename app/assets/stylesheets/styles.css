@@ -236,6 +236,10 @@
     font-size: 28%;
   }
 
+  h2 {
+    font-size: 108%;
+  }
+
   .main {
     color: #4ba4c7;
     font-weight: bold;
@@ -260,6 +264,7 @@
   }
 
   .container {
+    position: fixed;
     text-align: center;
     padding: 2%;
     margin-top: 3%;
@@ -273,7 +278,7 @@
   }
 
   .head {
-    font-size: 108%;
+    font-size: 180%;
   }
 
   .subhead {
