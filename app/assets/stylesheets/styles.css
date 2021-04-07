@@ -36,7 +36,7 @@
     border: 2px solid #4ba4c7;
     border-radius: 4px;
     height: 30px;
-    width: 100%;
+    width: 98%;
   }
 
   input[type=submit] {
@@ -209,7 +209,7 @@
     border: 2px solid #4ba4c7;
     border-radius: 4px;
     height: auto;
-    width: 100%;
+    width: 98%;
   }
 
   input[type=submit] {
