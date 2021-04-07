@@ -196,7 +196,7 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1% 1%;
     text-decoration: none;
   }
 
@@ -212,7 +212,7 @@
   }
 
   input[type=submit] {
-    padding:5px 15px; 
+    padding:1% 1%; 
     background:#4ba4c7; 
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     border:0 none;
@@ -244,23 +244,19 @@
     height: 70px; 
     width: 100%;
     font-size: 175%;
-    z-index: 100;
   }
 
   .myScrollableDiv {
     position: fixed;
-    top: 79px;
+    top: 100px;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
     overflow: auto;
   }
 
   .container {
     text-align: center;
-    border-radius: 20px;
-    background-color: white;
     padding: 2%;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -314,10 +310,10 @@
     background-attachment: fixed;
   }
 
-  .description {
+  /* .description {
     height: 500px;
     color:red;
-  }
+  } */
 
   .underline {
     text-decoration: underline;
