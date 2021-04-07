@@ -193,7 +193,7 @@
   }
 
   li a {
-    display: block;
+    display: inline-block
     color: white;
     text-align: center;
     padding-right: 8%;
@@ -240,6 +240,10 @@
     font-size: 90%;
   }
 
+  h2 {
+    font-size: 80%;
+  }
+
   .main {
     color: #4ba4c7;
     font-weight: bold;
@@ -248,7 +252,7 @@
   .nav {
     height: 90px; 
     width: 100%;
-    font-size: 85%;
+    font-size: 95%;
     position: fixed;
     top: 0;
     padding-right: 1%;
@@ -261,6 +265,7 @@
     right: 0;
     bottom: 0;
     overflow: auto;
+    max-width: 95%;
   }
 
   .container {
