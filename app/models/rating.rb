@@ -4,7 +4,7 @@ class Rating < ApplicationRecord
   belongs_to :course
 
   # All fields must be completed
-  validates :course_id, :stars, :content, presence: true
+  validates :stars, :content, presence: true
 
   def content_with_author
     "\"#{self.content}\" - #{self.user.name.capitalize}"

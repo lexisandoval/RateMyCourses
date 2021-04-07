@@ -5,7 +5,7 @@ class Course < ApplicationRecord
   belongs_to :subject
 
   # All fields must be completed
-  validates :subject_id, :number, :title, :description, presence: true
+  validates :number, :title, :description, presence: true
   # Course number must be a 3 digit integer 
   validates :number, length: { is: 3}
   validates :number, numericality: { only_integer: true }
@@ -15,7 +15,7 @@ class Course < ApplicationRecord
   validates :description, length: { in: 10..750 }
 
   scope :alpha_subject, -> { includes(:subject).order('subjects.name ASC') }
-  
+
   def number_with_subject
     "#{self.subject.name} #{self.number}"
   end
