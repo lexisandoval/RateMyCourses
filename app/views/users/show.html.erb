@@ -13,7 +13,7 @@
   <br>
 
   <h2>Click to view or edit any of your ratings:</h2>
-  <% @user.ratings.each do |rating| %>
+  <% @user.ratings.sort_by(&:updated_at).reverse.each do |rating| %>
       <br>
       <p style="font-weight:bold"><%= rating.updated_at.strftime("%A, %d %b %Y") %></p>
       <p><a class="no_underline"href="/users/<%= rating.user_id %>/ratings/<%= rating.id %>">(<span class="main underline"><%= rating.course.full_title %></span>)

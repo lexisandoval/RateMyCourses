@@ -12,6 +12,10 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find_by(id: params[:id])
+    if !@course
+      flash[:error] = "Unauthorized."
+      redirect_to ratings_path
+    end
   end
 
   def create
