@@ -220,7 +220,7 @@
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px; 
-    font-size: 28%;
+    font-size: 23%;
     height: auto;
     width: 100%;
   }
@@ -233,7 +233,7 @@
   select {
     width: 100%;
     color: black;
-    font-size: 34%;
+    font-size: 28%;
   }
 
   .main {
@@ -242,11 +242,12 @@
   }
 
   .nav {
-    height: 70px; 
+    height: 90px; 
     width: 100%;
-    font-size: 80%;
+    font-size: 64%;
     position: fixed;
     top: 0;
+    padding-right: 1%;
   }
 
   .myScrollableDiv {
@@ -272,15 +273,19 @@
   }
 
   .head {
-    font-size: 135%;
+    font-size: 108%;
   }
 
   .subhead {
-    font-size: 112%;
+    font-size: 90%;
   }
 
   .form {
-    font-size: 80%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: 62%;
   }
 
   .error {
@@ -310,11 +315,6 @@
     background-position: center;
     background-attachment: fixed;
   }
-
-  /* .description {
-    height: 500px;
-    color:red;
-  } */
 
   .underline {
     text-decoration: underline;
