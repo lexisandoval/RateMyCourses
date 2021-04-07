@@ -7,7 +7,7 @@
   <p class="main brand black">Submit a new rating <a class="no_underline main brand" style="color:#4ba4c7" href="/users/<%= current_user.id %>/ratings/new">here</a>.</p>
 
 <% else %>
-  <h2>Ratings:</h2>
+  <h2 class="classic">Ratings:</h2>
   <% @course.ratings.sort_by(&:updated_at).reverse.each do |rating| %>
     <h3><% rating.stars.times do  %>
       <%= "⭑" %>

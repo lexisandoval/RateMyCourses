@@ -242,6 +242,9 @@
     font-size: 80%;
   }
 
+  .classic {
+    font-size: 90%;
+  }
 
   .main {
     color: #4ba4c7;
@@ -297,11 +300,13 @@
   .error {
     color:#e60000; 
     text-align: center;
+    font-size: 80%;
   }
 
   .success {
     color:#05b405; 
     text-align: center;
+    font-size: 80%;
   }
 
   .small {

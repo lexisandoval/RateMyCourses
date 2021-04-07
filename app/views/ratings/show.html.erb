@@ -1,5 +1,5 @@
 <h1 class="brand subhead">Rating from <%= @rating.created_at.strftime("%A, %d %b %Y") %></h1>
-<h2>You gave <span class="plain"><%= @rating.course.full_title %></span> <%= @rating.stars %> stars.</h2>
+<h2 class="classic">You gave <span class="plain"><%= @rating.course.full_title %></span> <%= @rating.stars %> stars.</h2>
 <h4><% @rating.stars.times do  %>
       <%= "⭑" %>
 <% end %></h4>

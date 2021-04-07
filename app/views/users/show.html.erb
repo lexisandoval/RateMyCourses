@@ -5,14 +5,14 @@
   <p class="main brand" style="color:black">Please click <a class="no_underline main brand" style="color:#4ba4c7" href="/users/<%= @user.id %>/ratings/new">here</a> to add a rating.</p>
 
 <% else %>
-  <h2>Courses you have rated:</h2>
+  <h2 class="classic">Courses you have rated:</h2>
   <br>
   <% @user.courses.uniq.sort_by{|course| course.title}.each do |course| %>
     <a class="no_underline" href="/courses/<%= course.id %>"><h3 class="main brand black"><%= course.full_title %></h3></a>
   <% end%>
   <br>
 
-  <h2>Click to view or edit any of your ratings:</h2>
+  <h2 class="classic">Click to view or edit any of your ratings:</h2>
   <% @user.ratings.sort_by(&:updated_at).reverse.each do |rating| %>
       <br>
       <p style="font-weight:bold"><%= rating.updated_at.strftime("%A, %d %b %Y") %></p>
