@@ -196,7 +196,8 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 8%;
+    padding-right: 8%;
+    padding-left: 8%;
     text-decoration: none;
   }
 
@@ -219,7 +220,7 @@
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px; 
-    font-size: 34%;
+    font-size: 28%;
     height: auto;
     width: 100%;
   }
@@ -232,7 +233,7 @@
   select {
     width: 100%;
     color: black;
-    font-size: 42%;
+    font-size: 34%;
   }
 
   .main {
@@ -243,12 +244,14 @@
   .nav {
     height: 70px; 
     width: 100%;
-    font-size: 99%;
+    font-size: 80%;
+    position: fixed;
+    top: 0;
   }
 
   .myScrollableDiv {
     position: fixed;
-    top: 80px;
+    top: 70px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -269,15 +272,15 @@
   }
 
   .head {
-    font-size: 168%;
+    font-size: 135%;
   }
 
   .subhead {
-    font-size: 140%;
+    font-size: 112%;
   }
 
   .form {
-    font-size: 99%;
+    font-size: 80%;
   }
 
   .error {
