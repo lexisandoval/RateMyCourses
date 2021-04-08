@@ -11,3 +11,7 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+if(window.innerHeight > window.innerWidth){
+  document.getElementsByTagName("body")[0].style.transform = "rotate(90deg)";
+}
