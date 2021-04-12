@@ -1,6 +1,8 @@
 # RateMyCourses
 
-Rate, Review, and Rave about courses at UW-Madison. We're your trusted source for honest opinions from hundreds of students just like you!
+Rate, review, and rave about courses at UW-Madison. We're your trusted source for honest opinions from hundreds of students just like you!
+
+Project website: https://ratemy-courses.herokuapp.com
 
 ## Installation
 
@@ -12,7 +14,7 @@ Clone this repository and then execute:
 
 ## Usage
 
-To run the web application, run the command $ rails s and open your browser to http://localhost:3000.
+To run the web application from this repository, run the command $ rails s and open your browser to http://localhost:3000.
 
 Once open, you may create an account and review ratings for courses at UW-Madison. Your login information will be saved and you may return to your account at any time. Happy rating!
 
