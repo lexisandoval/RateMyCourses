@@ -1,18 +1,18 @@
 <div class="container mx-auto my-auto">
   <%= render partial: "layouts/errors", locals: {object: @user} %>
 
-  <h1 class="brand head">Sign Up</h1>
+  <h1 class="brand head">Sign Up</h1><br>
 
   <%= form_for(@user, :html => { class: 'form' }) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
-    <br><br>
+    
     <%= f.label :username %>
     <%= f.text_field :username %>
-    <br><br>
+    
     <%= f.label :password %>
     <%= f.password_field :password %>
-    <br><br>
+    <br>
     <%= f.submit "Create an Account" %>
   <% end %><br>
 
