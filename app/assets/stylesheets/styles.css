@@ -149,7 +149,7 @@ select {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
+  container {
     max-width: 80% !important;
   }
 }
