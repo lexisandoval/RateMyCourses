@@ -1,28 +1,29 @@
+<div class="container mx-auto my-auto">
+  <h1 class="brand head">Recent Course Ratings</h1>
 
-<h1 class="brand head">Recent Course Ratings</h1>
-
-<%= form_for(:ratings, :html => { class: 'form' }, method: 'get') do %>
-  <%= label_tag(:course_id, "Filter By Course:") %>
-  <%= collection_select(:rating, :course_id, Course.alpha_subject, :id, :full_title, { include_blank: '' }) %>
-  <br>
-  <%= submit_tag("Filter") %>
-<% end %>
-
-<br><br>
-
-<% if @ratings.blank? %>
-  <h2>No ratings yet.</h2>
-  <p class="main brand black">Submit a new rating <a class="no_underline main brand" style="color:#4ba4c7" href="/users/<%= current_user.id %>/ratings/new">here</a>.</p>
-<% else %>
-  <% @ratings.sort_by(&:updated_at).reverse.each do |rating| %>
-    <div>
-      <a class="no_underline" href="/courses/<%= rating.course.id %>"><h2 class="main brand black"><%= rating.course.full_title %></h2></a>
-
-      <h3><% rating.stars.times do  %>
-        <%= "⭑" %>
-      <% end %></h3>
-      
-      <p><%= rating.content_with_author %><p>
-    </div><br>
+  <%= form_for(:ratings, :html => { class: 'form' }, method: 'get') do %>
+    <%= label_tag(:course_id, "Filter By Course:") %>
+    <%= collection_select(:rating, :course_id, Course.alpha_subject, :id, :full_title, { include_blank: '' }) %>
+    <br>
+    <%= submit_tag("Filter") %>
   <% end %>
-<% end %>
+
+  <br><br>
+
+  <% if @ratings.blank? %>
+    <h3>No ratings yet.</h3>
+    <p class="main brand black">Submit a new rating <a class="no_underline main brand" style="color:#4ba4c7 !important" href="/users/<%= current_user.id %>/ratings/new">here</a>.</p>
+  <% else %>
+    <% @ratings.sort_by(&:updated_at).reverse.each do |rating| %>
+      <div>
+        <a class="no_underline" href="/courses/<%= rating.course.id %>"><h3 class="main brand black"><%= rating.course.full_title %></h3></a>
+
+        <h3><% rating.stars.times do  %>
+          <%= "⭑" %>
+        <% end %></h3>
+        
+        <p><%= rating.content_with_author %><p>
+      </div><br>
+    <% end %>
+  <% end %>
+</div>

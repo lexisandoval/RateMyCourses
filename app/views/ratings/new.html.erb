@@ -1,19 +1,21 @@
-<%= render partial: "layouts/errors", locals: {object: @rating} %>
+<div class="container mx-auto my-auto">
+  <%= render partial: "layouts/errors", locals: {object: @rating} %>
 
-<h1 class="brand head">New Rating</h1>
+  <h1 class="brand head">New Rating</h1>
 
-<%= form_for(@rating, :html => { class: 'form' }) do |f| %>
-  <p class="small main brand">(Click <a class="small main brand" style="color:#4ba4c7" href="/courses/new">here</a> if you don't see your course listed below.)</p><br>
+  <%= form_for(@rating, :html => { class: 'form' }) do |f| %>
+    <p class="small main brand">(Click <a class="small main brand" style="color:#4ba4c7 !important" href="/courses/new">here</a> if you don't see your course listed below.)</p><br>
 
-  <%= f.label :course %>
-  <%= f.collection_select :course_id, Course.alpha_subject, :id, :full_title, { include_blank: '' } %>
-  <br><br>
-  <%= f.label :stars %>
-  <%= f.select(:stars, ['1', '2', '3', '4', '5'], {include_blank: ""}) %>
-  <br><br>
-  <%= f.label :content, "Tell us what you thought about this course:" %><br>
-  <%= f.text_field :content %>
-  <br><br>
-  <%= f.submit "Submit Rating" %>
-  
-<% end %><br>
+    <%= f.label :course %>
+    <%= f.collection_select :course_id, Course.alpha_subject, :id, :full_title, { include_blank: '' } %>
+    <br><br>
+    <%= f.label :stars %>
+    <%= f.select(:stars, ['1', '2', '3', '4', '5'], {include_blank: ""}) %>
+    <br><br>
+    <%= f.label :content, "Tell us what you thought about this course:" %><br>
+    <%= f.text_field :content %>
+    <br><br>
+    <%= f.submit "Submit Rating" %>
+    
+  <% end %><br>
+</div>
