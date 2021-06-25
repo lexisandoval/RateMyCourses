@@ -65,6 +65,7 @@ select {
   text-align: center !important;
   padding: 2% !important;
   min-width: 500px !important;
+  max-width: 90% !important;
 }
 
 .brand {
