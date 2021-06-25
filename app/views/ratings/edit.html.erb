@@ -1,22 +1,24 @@
-<%= render partial: "layouts/errors", locals: {object: @rating} %>
+<div class="container mx-auto my-auto">
+  <%= render partial: "layouts/errors", locals: {object: @rating} %>
 
-<h1 class="brand head">Edit Rating</h1>
+  <h1 class="brand head">Edit Rating</h1>
 
-<%= form_for(@rating, :html => { class: 'form' }) do |f| %>
+  <%= form_for(@rating, :html => { class: 'form' }) do |f| %>
 
-  <%= f.label :course %>
-  <%= f.collection_select :course_id, Course.all, :id, :full_title %>
+    <%= f.label :course %>
+    <%= f.collection_select :course_id, Course.all, :id, :full_title %>
 
-  <p><a class="small main brand" href="/courses/new">(Click <span style = "color:#4ba4c7">here</span> if you don't see your course listed above.)</a></p>
+    <p><a class="small main brand" href="/courses/new">(Click <span style = "color:#4ba4c7">here</span> if you don't see your course listed above.)</a></p>
 
-  <%= f.label :stars %>
-  <%= f.select(:stars, ['1', '2', '3', '4', '5'], {include_blank: ""}) %>
-  <br><br>
-  <%= f.label :content, "Tell us what you thought about this course:" %><br>
-  <%= f.text_field :content %>
-  <br><br>
-  <%= f.submit "Update Rating" %>
-  
-<% end %>
+    <%= f.label :stars %>
+    <%= f.select(:stars, ['1', '2', '3', '4', '5'], {include_blank: ""}) %>
+    <br><br>
+    <%= f.label :content, "Tell us what you thought about this course:" %><br>
+    <%= f.text_field :content %>
+    <br><br>
+    <%= f.submit "Update Rating" %>
+    
+  <% end %>
 
-<p><a class="small main brand" href="/users/<%= @rating.user_id %>/ratings/<%= @rating.id %>">Go Back</a></p>
+  <p><a class="small main brand" href="/users/<%= @rating.user_id %>/ratings/<%= @rating.id %>">Go Back</a></p>
+<div>

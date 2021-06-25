@@ -1,18 +1,20 @@
-<%= render partial: "layouts/errors", locals: {object: @user} %>
+<div class="container mx-auto my-auto">
+  <%= render partial: "layouts/errors", locals: {object: @user} %>
 
-<h1 class="brand head">Sign Up</h1>
+  <h1 class="brand head">Sign Up</h1>
 
-<%= form_for(@user, :html => { class: 'form' }) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br><br>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <br><br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br><br>
-  <%= f.submit "Create an Account" %>
-<% end %>
+  <%= form_for(@user, :html => { class: 'form' }) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br><br>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <br><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br><br>
+    <%= f.submit "Create an Account" %>
+  <% end %><br>
 
-<p><a class="small main brand" href="/">Go Back</a></p>
+  <p><a class="small main brand" href="/">Go Back</a></p><br>
+</div>
