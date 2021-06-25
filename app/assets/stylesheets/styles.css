@@ -82,7 +82,7 @@ select {
 }
 
 .form {
-  font-size: 150% !important;
+  font-size: 175% !important;
 }
 
 .error {
@@ -104,6 +104,7 @@ select {
   font-size: small !important;
   color: black !important;
   text-decoration: none !important;
+  margin-top: 3% !important;
 }
 
 .plain {
