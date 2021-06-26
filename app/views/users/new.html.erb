@@ -5,16 +5,16 @@
 
   <%= form_for(@user, :html => { class: 'form' }) do |f| %>
     <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
+    <%= f.text_field :name %><br><br>
     
     <%= f.label :username %><br>
-    <%= f.text_field :username %><br>
+    <%= f.text_field :username %><br><br>
     
     <%= f.label :password %><br>
     <%= f.password_field :password %><br>
     <br>
     <%= f.submit "Create an Account" %>
-  <% end %><br>
+  <% end %><h3></h3><br>
 
   <p><a class="black no_underline main brand" href="/">Go Back</a></p><br>
 </div>
