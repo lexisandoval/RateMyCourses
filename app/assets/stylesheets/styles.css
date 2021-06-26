@@ -2,7 +2,6 @@ body {
   margin: 0px !important;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   padding: 0 !important;
-  text-align: center !important;
 }
 
 li a {
@@ -20,8 +19,7 @@ li a:hover:not(.main) {
 input[type=text], input[type=password] {
   border: 2px solid #4ba4c7 !important;
   border-radius: 4px !important;
-  height: 30px !important;
-  width: 98% !important;
+  width: 100% !important;
 }
 
 input[type=submit] {
@@ -33,7 +31,6 @@ input[type=submit] {
   -webkit-border-radius: 5px !important;
   border-radius: 5px !important; 
   font-size: 60% !important;
-  height: 35px !important;
   width: 100% !important;
 }
 
@@ -51,7 +48,15 @@ select {
 .main {
   color: #4ba4c7 !important;
   font-weight: bold !important;
-  font-size: 100% !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.container {
+  padding: 2% !important;
+  text-align: center !important;
 }
 
 .nav {
@@ -78,6 +83,10 @@ select {
 
 .form {
   font-size: 175% !important;
+}
+
+.big {
+  font-size: 100% !important;
 }
 
 .error {
@@ -140,12 +149,4 @@ select {
 
 .blue {
   color: #4ba4c7 !important;
-}
-
-@media only screen and (min-width: 600px) {
-  .container {
-    padding: 2% !important;
-    min-width: 500px !important;
-    max-width: 80% !important;
-  }
 }
