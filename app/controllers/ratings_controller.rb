@@ -1,6 +1,7 @@
 class RatingsController < ApplicationController
 
   before_action :redirect_if_not_logged_in
+  skip_before_action :redirect_if_not_logged_in, only: [:preview]
 
   def index
     # if user clicks the filter button, filter by course name
@@ -62,6 +63,10 @@ class RatingsController < ApplicationController
 
     flash[:message] = "Rating was successfully deleted."
     redirect_to ratings_path
+  end
+
+  def preview
+    @ratings= Rating.all.limit(3)
   end
 
   private
