@@ -24,7 +24,6 @@
   </head>
   <body>
     <%= render 'layouts/navbar' %>
-    <br>
 
     <p class="error"><%= @error %></p>
     
@@ -38,7 +37,6 @@
           <p class="success"><%= flash[:message] %></p>
         <% end %>
 
-        <%# <br> %>
         <%= yield %>
       </div>
     </div>

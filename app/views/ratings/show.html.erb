@@ -1,9 +1,9 @@
 <div class="container mx-auto my-auto">
-      <h1 class="bold brand subhead">Rating from <%= @rating.created_at.strftime("%A, %d %b %Y") %></h1><br>
-      <h5 class="classic">You gave <span class="plain"><%= @rating.course.full_title %></span> <%= @rating.stars %> stars.</h5>
-      <h5><% @rating.stars.times do  %>
+      <h1 class="brand subhead">Rating from <%= @rating.created_at.strftime("%A, %d %b %Y") %></h1><br>
+      <p>You gave <span class="bold blue underline"><%= @rating.course.full_title %></span> <%= @rating.stars %> stars.</p>
+      <h4 class="blue"><% @rating.stars.times do  %>
             <%= "⭑" %>
-      <% end %></h5><br>
+      <% end %></h4><br>
       <p>"<%= @rating.content %>"</p>
 
       <br>

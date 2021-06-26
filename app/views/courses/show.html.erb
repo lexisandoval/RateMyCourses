@@ -1,5 +1,5 @@
 <div class="container mx-auto my-auto"> 
-  <h1 class="bold brand subhead"><%= @course.full_title %></h1><br>
+  <h1 class="brand subhead"><%= @course.full_title %></h1><br>
   <p><%= @course.description %></p>
   <br>
 
@@ -8,11 +8,11 @@
     <p class="main brand black">Submit a new rating <a class="no_underline main brand" style="color:#4ba4c7" href="/users/<%= current_user.id %>/ratings/new">here</a>.</p>
 
   <% else %>
-    <h4 class="classic">Ratings:</h4>
+    <h4 class="classic">Ratings:</h4><br>
     <% @course.ratings.sort_by(&:updated_at).reverse.each do |rating| %>
-      <h4><% rating.stars.times do  %>
+      <h4 class="blue"><% rating.stars.times do  %>
         <%= "⭑" %>
-      <% end %></h4>
+      <% end %></h4><br>
 
       <p><%= rating.content_with_author %></p>   
     <% end %>
