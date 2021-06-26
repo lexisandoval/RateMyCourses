@@ -1,25 +1,22 @@
-<div class="container mx-auto my-auto">
-  <h1 class="brand head">Hi, <%= @user.name.capitalize %>!</h1>
+<h1 class="brand head">Hi, <%= @user.name.capitalize %>!</h1>
 
-  <% if @user.ratings.blank? %>
-    <h3>You have not rated any courses yet.</h3><br>
-    <p class="main brand" style="color:black !important">Please click <a class="no_underline main brand" style="color:#4ba4c7 !important" href="/users/<%= @user.id %>/ratings/new">here</a> to add a rating.</p>
+<% if @user.ratings.blank? %>
+  <h3>You have not rated any courses yet.</h3><br>
+  <p class="main brand" style="color:black !important">Please click <a class="no_underline main brand" style="color:#4ba4c7 !important" href="/users/<%= @user.id %>/ratings/new">here</a> to add a rating.</p>
 
-  <% else %>
-    <h3 class="classic">Courses you have rated:</h3>
-    <br>
-    <% @user.courses.uniq.sort_by{|course| course.title}.each do |course| %>
-      <a class="no_underline" href="/courses/<%= course.id %>"><h5 class="main brand black"><%= course.full_title %></h5></a><br>
-    <% end%>
-    <br><br>
-
-    <h3 class="classic">Click to view or edit any of your ratings:</h3>
-    <% @user.ratings.sort_by(&:updated_at).reverse.each do |rating| %>
-        <br>
-        <p><%= rating.updated_at.strftime("%A, %d %b %Y") %></p>
-        <p><a class="no_underline"href="/users/<%= rating.user_id %>/ratings/<%= rating.id %>">(<span class="main underline"><%= rating.course.full_title %></span>)
-        "<%= rating.content %>"</span></a></p>
-      <% end%>
-    <% end %>
+<% else %>
+  <h3 class="classic">Courses you have rated:</h3>
   <br>
-</div>
+  <% @user.courses.uniq.sort_by{|course| course.title}.each do |course| %>
+    <a class="no_underline" href="/courses/<%= course.id %>"><h5 class="main brand black"><%= course.full_title %></h5></a><br>
+  <% end%>
+  <br><br>
+
+  <h3 class="classic">Click to view or edit any of your ratings:</h3>
+  <% @user.ratings.sort_by(&:updated_at).reverse.each do |rating| %>
+    <br>
+    <p><%= rating.updated_at.strftime("%A, %d %b %Y") %></p>
+    <p><a class="no_underline"href="/users/<%= rating.user_id %>/ratings/<%= rating.id %>">(<span class="main underline"><%= rating.course.full_title %></span>)
+    "<%= rating.content %>"</span></a></p>
+  <% end%>
+<% end %>

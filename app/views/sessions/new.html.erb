@@ -1,18 +1,16 @@
-<div class="container mx-auto my-auto">
-  <h1 class="brand head">Log In</h1><br>
+<h1 class="brand head">Log In</h1><br>
 
-  <%= form_for(:user, :html => { class: 'form' }) do |f| %>
-    <%= f.label :username %><br>
-    <%= f.text_field :username %><br><br>
-    
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-    <br><br>
-    <%= f.submit "Log In" %>
-  <% end %>
-  <br>
-  <h5>or</h5><p>
+<%= form_for(:user, :html => { class: 'form' }) do |f| %>
+  <%= f.label :username %><br>
+  <%= f.text_field :username %><br><br>
+  
+  <%= f.label :password %><br>
+  <%= f.password_field :password %>
+  <br><br>
+  <%= f.submit "Log In" %>
+<% end %>
+<br>
+<h5>or</h5><p>
 
-  <h3 class="form"><%= button_to "Log In With Google", '/auth/google_oauth2' %></h3><br>
-  <p><a class="black no_underline main brand" href="/">Go Back</a></p><br>
-</div>
+<h3 class="form"><%= button_to "Log In With Google", '/auth/google_oauth2' %></h3><br>
+<p><a class="black no_underline main brand" href="/">Go Back</a></p>
