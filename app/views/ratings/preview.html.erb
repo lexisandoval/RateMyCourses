@@ -1,0 +1,17 @@
+<div class="container mx-auto my-auto">
+  <h1 class="brand head">Preview Recent Course Ratings</h1>
+  <br><br>
+  <% @ratings.sort_by(&:updated_at).reverse.each do |rating| %>
+    <div>
+      <h4 class="main brand black"><%= rating.course.full_title %></h4>
+
+      <h4 class="plain"><% rating.stars.times do  %>
+        <%= "⭑" %>
+      <% end %></h4>
+      
+      <p><%= rating.content_with_author %><p>
+    </div><br>
+  <% end %>
+  <p><a class="black no_underline main brand" href="/">Go Back</a></p><br>
+
+</div>
