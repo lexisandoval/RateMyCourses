@@ -99,6 +99,10 @@ select {
   text-align: center !important;
 }
 
+.smol {
+  font-size: 50% !important;
+}
+
 .white {
   background-color: white !important;
   color: black !important;
