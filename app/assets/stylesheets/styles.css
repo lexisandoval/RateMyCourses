@@ -30,7 +30,7 @@ input[type=submit] {
   cursor:pointer !important;
   -webkit-border-radius: 5px !important;
   border-radius: 5px !important; 
-  font-size: 80% !important;
+  /* font-size: 80% !important; */
   width: 100% !important;
 }
 
