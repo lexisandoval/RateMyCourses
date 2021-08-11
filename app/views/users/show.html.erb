@@ -2,7 +2,7 @@
 
 <% if @user.ratings.blank? %>
   <h3>You have not rated any courses yet.</h3><br>
-  <p class="main brand" style="color:black !important">Please click <a class="no_underline main brand" style="color:#4ba4c7 !important" href="/users/<%= @user.id %>/ratings/new">here</a> to add a rating.</p>
+  <p class="main brand" style="color:black !important">(Please click <a class="no_underline main brand" style="color:#4ba4c7 !important" href="/users/<%= @user.id %>/ratings/new">here</a> to add a rating.)</p>
 
 <% else %>
   <h3 class="classic">Courses you have rated:</h3>
