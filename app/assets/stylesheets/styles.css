@@ -168,9 +168,9 @@ select {
   }
 }
 
-@media screen and (min-width: 800px) { 
+@media screen and (max-width: 800px) { 
   .head {
-    font-size: 175% !important;
+    font-size: 200% !important;
   }
 
   .home_img {
