@@ -171,4 +171,10 @@ select {
   .head {
     font-size: 200% !important;
   }
+
+  .home_img {
+    width: 75px !important;
+    height: auto !important;
+    margin-bottom: 3% !important;
+  }
 }
