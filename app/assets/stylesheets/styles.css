@@ -170,12 +170,16 @@ select {
 
 @media screen and (max-width: 800px) { 
   .head {
-    font-size: 200% !important;
+    font-size: 225% !important;
   }
 
   .home_img {
     width: 75px !important;
     height: auto !important;
     margin-bottom: 3% !important;
+  }
+
+  .mobilespacer {
+    padding: 2% !important;
   }
 }
