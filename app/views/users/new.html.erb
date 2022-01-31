@@ -1,5 +1,6 @@
   <%= render partial: "layouts/errors", locals: {object: @user} %>
 
+<div class="center">
   <h1 class="brand head">Sign Up</h1><br>
 
   <%= form_for(@user, :html => { class: 'form' }) do |f| %>
@@ -16,3 +17,4 @@
   <% end %><h3></h3><br>
 
   <p><a class="black no_underline main brand" href="/">Go Back</a></p>
+</div>
