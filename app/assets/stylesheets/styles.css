@@ -157,6 +157,14 @@ select {
   color: #4ba4c7 !important;
 }
 
+form {
+  max-width: 50% !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 @media screen and (min-width: 800px) { 
   .center {
     /* margin: 0 !important;
